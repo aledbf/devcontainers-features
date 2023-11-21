@@ -22,7 +22,9 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/aledbf/devcontainers-features/gitpod-ssh-public-key-auth:latest": {}
+    "ghcr.io/aledbf/devcontainers-features/gitpod-ssh-public-key-auth:latest": {
+      "version": "latest"
+    }
   },
   "remoteUser": "node",
   "updateContentCommand": "npm install -g @devcontainers/cli",
@@ -33,6 +35,6 @@
     "onAutoForward": "silent"
   },
   "mounts": [
-    "type=bind,source=/home/gitpod/.ssh/id_rsa.pub,target=/etc/gitpod/public-keys"
+    "type=bind,source=/home/gitpod/.ssh/id_rsa.pub,target=/tmp/public-keys"
   ]
 }
