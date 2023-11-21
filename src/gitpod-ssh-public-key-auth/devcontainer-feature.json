@@ -3,5 +3,8 @@
   "id": "gitpod-ssh-public-key-auth",
   "version": "0.0.1",
   "description": "Configure SSH to use the ",
-  "documentationURL": "https://github.com/aledbf/devcontainers-features/tree/main/src/gitpod-ssh-public-key-auth"
+  "documentationURL": "https://github.com/aledbf/devcontainers-features/tree/main/src/gitpod-ssh-public-key-auth",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/sshd"
+  ]
 }
