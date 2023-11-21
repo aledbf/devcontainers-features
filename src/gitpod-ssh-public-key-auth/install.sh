@@ -7,12 +7,20 @@ if [ ! -f "/etc/ssh/sshd_config" ]; then
 	exit 1
 fi
 
-mkdir -p /etc/gitpod
-chmod 664 /etc/gitpod
+mkdir -p /etc/gitpod --mode=0744
 
-sed -i -E "s|#?\s*AuthorizedKeysFile\s+.+|AuthorizedKeysFile /etc/gitpod/public-keys|g" /etc/ssh/sshd_config
-sed -i -E "s|#?\s*LogLevel\s+.+|LogLevel DEBUG3|g" /etc/ssh/sshd_config
+cat <<EOF > /etc/ssh/sshd_config.d/gitpod
+PermitRootLogin yes
 
-echo "AuthenticationMethods publickey,password" >> /etc/ssh/sshd_config
+PermitUserEnvironment yes
+StrictModes no
+
+#LogLevel DEBUG3
+
+AuthorizedKeysFile /etc/gitpod/public-keys
+
+PubkeyAuthentication yes
+AuthenticationMethods publickey password
+EOF
 
 echo 'done'
