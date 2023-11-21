@@ -15,7 +15,7 @@ StrictModes no
 
 #LogLevel DEBUG3
 
-AuthorizedKeysFile /tmp/public-keys
+AuthorizedKeysFile /public-keys
 
 PubkeyAuthentication yes
 AuthenticationMethods publickey password

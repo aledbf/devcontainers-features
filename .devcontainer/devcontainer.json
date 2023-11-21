@@ -35,6 +35,6 @@
     "onAutoForward": "silent"
   },
   "mounts": [
-    "type=bind,source=/home/gitpod/.ssh/id_rsa.pub,target=/tmp/public-keys"
+    "type=bind,source=/home/gitpod/.ssh/id_rsa.pub,target=/public-keys,readonly"
   ]
 }
