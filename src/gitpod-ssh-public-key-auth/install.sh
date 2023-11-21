@@ -11,5 +11,6 @@ mkdir -p /etc/gitpod
 chmod 664 /etc/gitpod
 
 sed -i -E "s|#?\s*AuthorizedKeysFile\s+.+|AuthorizedKeysFile /etc/gitpod/public-keys|g" /etc/ssh/sshd_config
+sed -i -E "s|#?\s*LogLevel\s+.+|LogLevel DEBUG3|g" /etc/ssh/sshd_config
 
 echo 'done'
