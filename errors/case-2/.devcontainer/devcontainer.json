@@ -1,0 +1,17 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/sshd": {
+      "version": "latest"
+    },
+    "ghcr.io/aledbf/devcontainers-features/gitpod-ssh-public-key-auth": {
+      "version": "latest"
+    }
+  },
+  "remoteUser": "root root",
+  "updateContentCommand": "npm install -g @devcontainers/cli",
+  "appPort": [
+    2222
+  ]
+}

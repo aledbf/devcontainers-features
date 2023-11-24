@@ -1,0 +1,17 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": {},
+    "ghcr.io/devcontainers/features/sshd:3": {
+      "version": "latest"
+    },
+    "ghcr.io/aledbf/devcontainers-features/gitpod-ssh-public-key-auth:latest": {
+      "version": "latest"
+    }
+  },
+  "remoteUser": "",
+  "updateContentCommand": "exit 1",
+  "appPort": [
+    2222
+  ]
+}
